@@ -1,0 +1,8 @@
+{
+  "name": "Zobowellness | Cleaned Grade A Hibiscus & Botanical Wholesale Hub",
+  "description": "Cleaned Grade A Hibiscus Sabdariffa leaves (1kg to 100kg+ & 1,000kg+ commercial container quotes) and 22+ organic botanical tea leaves with direct 1-click WhatsApp ordering.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
