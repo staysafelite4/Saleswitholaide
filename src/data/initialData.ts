@@ -554,29 +554,38 @@ export const INITIAL_SITE_CONFIG: SiteConfig = {
   reviews: [
     {
       id: 'rev_1',
-      author: 'Adebayo Beverage Craft',
-      location: 'Toronto, Canada',
+      author: 'Food Vendor & Commercial Caterer',
+      location: '5kg Bulk Hibiscus Sack Buyer',
       rating: 5,
-      comment: 'We buy the 50kg Hibiscus sacks regularly for our commercial Zobo bottling business. Zero sand, intense deep crimson color, and incredible aroma. The WhatsApp ordering is lightning fast!',
-      date: '2 days ago',
+      comment: 'I didn’t know the leaves will be this much! I thought 5kg and assumed it’s a little bag... Not knowing it’s a full sack! 😂 I buy $7 almost on a daily basis, this one will save me so much money!',
+      date: 'Verified Order',
       verified: true
     },
     {
       id: 'rev_2',
-      author: 'Grace O. (African Store Owner)',
-      location: 'London, United Kingdom',
+      author: 'Craft Zobo Beverage Brewer',
+      location: 'Fresh Zobo Pot & Clean Leaves',
       rating: 5,
-      comment: 'Zobowellness supplies our store with 25kg Hibiscus bags and 1kg Stevia and Chamomile pouches. Our customers love the quality!',
-      date: '5 days ago',
+      comment: 'Clean leaves! Fresh n ur smells sooo good. A little goes a long way. The best!',
+      date: 'Verified Review',
       verified: true
     },
     {
       id: 'rev_3',
-      author: 'Dr. Evelyn Martinez',
-      location: 'New York, USA',
+      author: 'Wholesale Hibiscus Client',
+      location: 'Grade A Hibiscus Sabdariffa',
       rating: 5,
-      comment: 'The Moringa leaves and Hawthorn berries are exceptionally fresh. Beautiful packaging and 48-hour order dispatch.',
-      date: '1 week ago',
+      comment: 'The quality of the zobo is fresh and the leaves are clean and well packaged. I will definitely be ordering more.',
+      date: 'Verified Buyer',
+      verified: true
+    },
+    {
+      id: 'rev_4',
+      author: 'Botanicals & Recipe Client',
+      location: 'Zobowellness Recipe E-Book & Leaves',
+      rating: 5,
+      comment: 'Delivered ma. So clean! E se ma. Value for money guaranteed!',
+      date: 'Verified Order',
       verified: true
     }
   ]
