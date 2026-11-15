@@ -98,8 +98,8 @@ export const SpaProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   }, [appointments]);
 
   const formatCurrency = (amount: number): string => {
-    const symbol = config.currencySymbol || '$';
-    return `${symbol}${Math.round(amount).toLocaleString('en-US')}`;
+    const symbol = config.currencySymbol && config.currencySymbol !== '₦' ? config.currencySymbol : '$';
+    return `${symbol}${Math.round(amount).toLocaleString('en-US')} CAD`;
   };
 
   const updateConfig = (updates: Partial<SpaConfig>) => {

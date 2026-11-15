@@ -8,8 +8,6 @@ export interface BusinessTemplate {
   features: string[];
   setupTime: string;
   priceCAD: number;
-  priceNGN?: number;
-  priceUSD?: number;
   highlightBadge?: string;
   rating: number;
   demoStats: {
@@ -25,8 +23,6 @@ export interface AgencyPackage {
   tagline: string;
   priceCAD: number;
   compareAtPriceCAD?: number;
-  priceNGN?: number;
-  priceUSD?: number;
   deliveryTime: string;
   features: string[];
   popular?: boolean;
@@ -36,12 +32,10 @@ export const AGENCY_PACKAGES: AgencyPackage[] = [
   {
     id: 'starter',
     name: 'Starter Launch Package',
-    badge: '🔥 ₦5,000 / $5–10 CAD Special Promo',
+    badge: '🔥 $10 CAD Special Promo',
     tagline: 'A limited-time opportunity for EVERY business owner to get listed online and take orders.',
     priceCAD: 10,
-    priceNGN: 5000,
-    priceUSD: 3.5,
-    compareAtPriceCAD: 180,
+    compareAtPriceCAD: 350,
     deliveryTime: 'Delivered within 48 Hours',
     features: [
       'Turnkey Industry Website Template of your choice',
@@ -57,7 +51,7 @@ export const AGENCY_PACKAGES: AgencyPackage[] = [
     name: 'The One Premium Package',
     badge: 'Everything Included',
     tagline: 'Complete turnkey rollout with custom branding, pre-loaded catalog, and priority setup.',
-    priceCAD: 180,
+    priceCAD: 350,
     deliveryTime: 'Delivered within 48 Hours Express',
     popular: true,
     features: [
@@ -90,8 +84,7 @@ export const TEMPLATES: BusinessTemplate[] = [
       'Built-in Seller Center CMS to update stock, prices & orders in real-time'
     ],
     setupTime: 'Within 48 Hours',
-    priceCAD: 180,
-    priceUSD: 130,
+    priceCAD: 350,
     highlightBadge: '⭐ Exact Marketplace Experience',
     rating: 5.0,
     demoStats: {
@@ -114,8 +107,7 @@ export const TEMPLATES: BusinessTemplate[] = [
       'Wholesale & Party Dispenser Keg Booker'
     ],
     setupTime: 'Within 48 Hours',
-    priceCAD: 180,
-    priceUSD: 130,
+    priceCAD: 350,
     highlightBadge: 'Most Popular for Food & Drinks',
     rating: 4.9,
     demoStats: {
@@ -138,8 +130,7 @@ export const TEMPLATES: BusinessTemplate[] = [
       'Live Kitchen Admin CMS to Update Prices, Stock & Dish Photos'
     ],
     setupTime: 'Within 48 Hours',
-    priceCAD: 180,
-    priceUSD: 130,
+    priceCAD: 350,
     highlightBadge: '100% African Cuisines Only',
     rating: 5.0,
     demoStats: {
@@ -162,8 +153,7 @@ export const TEMPLATES: BusinessTemplate[] = [
       'Live Atelier Admin CMS with Preset Luxury Photos & Stock Switcher'
     ],
     setupTime: 'Within 48 Hours',
-    priceCAD: 180,
-    priceUSD: 130,
+    priceCAD: 350,
     highlightBadge: 'Quiet Luxury & Chic',
     rating: 4.9,
     demoStats: {
@@ -186,8 +176,7 @@ export const TEMPLATES: BusinessTemplate[] = [
       'Verified Client Reviews & Care Instructions'
     ],
     setupTime: 'Within 48 Hours',
-    priceCAD: 180,
-    priceUSD: 130,
+    priceCAD: 350,
     highlightBadge: 'Serene & Clean',
     rating: 4.9,
     demoStats: {

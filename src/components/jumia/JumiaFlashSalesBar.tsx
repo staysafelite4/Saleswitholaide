@@ -113,10 +113,10 @@ export const JumiaFlashSalesBar: React.FC<JumiaFlashSalesBarProps> = ({
                   {/* Pricing */}
                   <div className="mt-auto">
                     <div className="text-sm sm:text-base font-black text-stone-900">
-                      $ {product.price.toLocaleString()}
+                      ${product.price.toLocaleString()} CAD
                     </div>
                     <div className="text-[11px] text-stone-400 line-through">
-                      $ {product.oldPrice.toLocaleString()}
+                      ${product.oldPrice.toLocaleString()} CAD
                     </div>
 
                     {/* Stock Progress Bar */}

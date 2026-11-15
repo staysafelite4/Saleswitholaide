@@ -163,14 +163,14 @@ export const RestaurantProvider: React.FC<{ children: React.ReactNode }> = ({ ch
 
   // Delivery fee by zone
   const activeZoneObj = config.deliveryZones.find(z => z.zone === selectedZone);
-  const zoneFee = activeZoneObj ? activeZoneObj.fee : config.baseDeliveryFee || 1500;
-  const isFreeDelivery = traySubtotal >= (config.freeDeliveryThreshold || 25000);
+  const zoneFee = activeZoneObj ? activeZoneObj.fee : config.baseDeliveryFee || 5;
+  const isFreeDelivery = traySubtotal >= (config.freeDeliveryThreshold || 50);
   const trayDeliveryFee = isFreeDelivery || traySubtotal === 0 ? 0 : zoneFee;
   const trayTotal = traySubtotal + trayDeliveryFee;
 
   const formatCurrency = (amount: number): string => {
-    const symbol = config.currencySymbol || '$';
-    return `${symbol}${Math.round(amount).toLocaleString('en-US')}`;
+    const symbol = config.currencySymbol && config.currencySymbol !== '₦' ? config.currencySymbol : '$';
+    return `${symbol}${Math.round(amount).toLocaleString('en-US')} CAD`;
   };
 
   const updateConfig = (updates: Partial<RestaurantConfig>) => {

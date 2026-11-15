@@ -445,7 +445,7 @@ export const INITIAL_SITE_CONFIG: SiteConfig = {
   whatsappGreeting: 'Hello Zobowellness! I would like to place an order for cleaned Grade A Hibiscus & Botanicals.',
   currencySymbol: '$',
   currencyCode: 'CAD',
-  deliveryNotice: 'Worldwide & Regional Express Shipping (CAD, USD, GBP pricing supported). Delivered in 48 Hours.',
+  deliveryNotice: 'Worldwide & Regional Express Shipping (All pricing in $ CAD). Delivered in 48 Hours.',
   deliveryBaseFee: 10,
   freeDeliveryThreshold: 100,
   contactEmail: 'sales@zobowellness.com',
@@ -541,7 +541,7 @@ export const INITIAL_SITE_CONFIG: SiteConfig = {
     {
       id: 'faq_3',
       question: 'How do I place an order via WhatsApp?',
-      answer: 'Simply select your items and preferred quantity sizes on the site, then click "Order via WhatsApp" or the floating green WhatsApp button. Your exact order details and total in your chosen currency ($ CAD, $ USD, or £ GBP) will be sent straight to our team at 08030795206.',
+      answer: 'Simply select your items and preferred quantity sizes on the site, then click "Order via WhatsApp" or the floating green WhatsApp button. Your exact order details and total in $ CAD will be sent straight to our team at 08030795206.',
       category: 'Ordering'
     },
     {

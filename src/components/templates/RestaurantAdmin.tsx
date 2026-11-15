@@ -71,7 +71,7 @@ export const RestaurantAdmin: React.FC = () => {
   const [newDishNative, setNewDishNative] = useState('');
   const [newDishTagline, setNewDishTagline] = useState('');
   const [newDishDesc, setNewDishDesc] = useState('');
-  const [newDishPrice, setNewDishPrice] = useState(6500);
+  const [newDishPrice, setNewDishPrice] = useState(18);
   const [newDishCategory, setNewDishCategory] = useState<Dish['category']>('soups_swallows');
   const [newDishImage, setNewDishImage] = useState(AFRICAN_EGUSI_IMAGE);
   const [newDishSpice, setNewDishSpice] = useState<Dish['spiceLevel']>('Medium');
@@ -118,7 +118,7 @@ export const RestaurantAdmin: React.FC = () => {
       nativeName: newDishNative || undefined,
       tagline: newDishTagline || 'Authentic African Delicacy',
       description: newDishDesc || 'Prepared fresh over hardwood firewood with native spices.',
-      price: Number(newDishPrice) || 6000,
+      price: Number(newDishPrice) || 18,
       category: newDishCategory,
       image: newDishImage,
       availability: 'ready_to_cook',
@@ -135,7 +135,7 @@ export const RestaurantAdmin: React.FC = () => {
     setNewDishName('');
     setNewDishNative('');
     setNewDishDesc('');
-    setNewDishPrice(6500);
+    setNewDishPrice(18);
   };
 
   const handleSaveEditDish = (e: React.FormEvent) => {

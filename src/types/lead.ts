@@ -11,8 +11,6 @@ export interface ReservedLead {
   subdomain: string;
   lockedPriceCAD: number;
   originalPriceCAD: number;
-  lockedPriceNGN?: number;
-  originalPriceNGN?: number;
   notes?: string;
   timestamp: string;
   status: 'Reserved' | 'Contacted' | 'Onboarded' | 'Live';

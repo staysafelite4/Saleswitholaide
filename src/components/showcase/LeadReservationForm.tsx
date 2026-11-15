@@ -56,7 +56,7 @@ export const LeadReservationForm: React.FC<LeadReservationFormProps> = ({
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [reservedLead, setReservedLead] = useState<ReservedLead | null>(null);
   const [copiedCode, setCopiedCode] = useState(false);
-  const [remainingSlots, setRemainingSlots] = useState<number>(14);
+  const [remainingSlots, setRemainingSlots] = useState<number>(13);
 
   // Sync initial props if they change
   useEffect(() => {
@@ -75,17 +75,17 @@ export const LeadReservationForm: React.FC<LeadReservationFormProps> = ({
     const updateSlotsFromStorage = () => {
       try {
         const storedSlots = localStorage.getItem(SLOTS_KEY);
-        if (storedSlots) {
+        if (storedSlots && storedSlots !== '14') {
           const parsed = parseInt(storedSlots, 10);
           if (!isNaN(parsed) && parsed >= 0) {
             setRemainingSlots(parsed);
           }
         } else {
-          localStorage.setItem(SLOTS_KEY, '14');
-          setRemainingSlots(14);
+          localStorage.setItem(SLOTS_KEY, '13');
+          setRemainingSlots(13);
         }
       } catch {
-        setRemainingSlots(14);
+        setRemainingSlots(13);
       }
     };
 
@@ -149,9 +149,7 @@ export const LeadReservationForm: React.FC<LeadReservationFormProps> = ({
       templateName: chosenTemplate.title,
       subdomain: finalSubdomain,
       lockedPriceCAD: 10,
-      originalPriceCAD: 180,
-      lockedPriceNGN: 5000,
-      originalPriceNGN: 185000,
+      originalPriceCAD: 350,
       notes: notes.trim(),
       timestamp: new Date().toISOString(),
       status: 'Reserved'
@@ -195,8 +193,8 @@ export const LeadReservationForm: React.FC<LeadReservationFormProps> = ({
       `🎟 *CLAIM RESERVED $10 CAD WEBSITE SLOT [${lead.slotCode}]*`,
       `*SalesWithOlaide — Subsidized Promo (Ends Nov 29)*`,
       `━━━━━━━━━━━━━━━━━━━━━━━━━`,
-      `🏷 *Offer:* Starter Launch Package ($10 CAD / ₦5,000 NGN / approx. $3.50 USD / €3.50 EUR / £3 GBP)`,
-      `💰 *Original Price:* $180 CAD (You saved $170 CAD!)`,
+      `🏷 *Offer:* Starter Launch Package ($10 CAD)`,
+      `💰 *Original Price:* $350 CAD (You saved $340 CAD!)`,
       `⏱ *Delivery Guarantee:* Within 48 Hours Express`,
       `🎨 *Selected Template:* ${lead.templateName}`,
       `━━━━━━━━━━━━━━━━━━━━━━━━━`,
@@ -288,8 +286,8 @@ export const LeadReservationForm: React.FC<LeadReservationFormProps> = ({
                 <span className="text-stone-400 block text-[10px] uppercase font-mono">Locked Promo Price</span>
                 <div className="flex items-baseline gap-2">
                   <span className="text-amber-400 font-bold font-mono text-base">$10 CAD</span>
-                  <span className="line-through text-stone-500 font-mono text-xs">$180 CAD</span>
-                  <span className="text-emerald-400 font-semibold text-[10px]">(-94%)</span>
+                  <span className="line-through text-stone-500 font-mono text-xs">$350 CAD</span>
+                  <span className="text-emerald-400 font-semibold text-[10px]">(-97%)</span>
                 </div>
               </div>
 
@@ -355,9 +353,8 @@ export const LeadReservationForm: React.FC<LeadReservationFormProps> = ({
       {/* Urgency Badge */}
       <div className="flex flex-wrap items-center justify-between gap-3 mb-6">
         <div className="flex items-center gap-2 text-xs font-mono">
-          <span className="text-stone-400">Scarcity:</span>
-          <span className="text-amber-400 font-bold px-2 py-0.5 bg-stone-900 border border-stone-800 rounded">
-            Only {remainingSlots} slots remaining
+          <span className="text-amber-400 font-bold px-2.5 py-1 bg-stone-900 border border-stone-800 rounded">
+            {remainingSlots} slots left
           </span>
         </div>
       </div>
@@ -367,7 +364,7 @@ export const LeadReservationForm: React.FC<LeadReservationFormProps> = ({
           Reserve Your $10 CAD Website Slot
         </h3>
         <p className="text-xs sm:text-sm text-stone-300 leading-relaxed">
-          Input your business and contact information below to lock in the $10 CAD promo rate (normally $180 CAD). Offer ends <strong>November 29th</strong>. Your website will be delivered within 48 hours.
+          Input your business and contact information below to lock in the $10 CAD promo rate (normally $350 CAD). Offer ends <strong>November 29th</strong>. Your website will be delivered within 48 hours.
         </p>
       </div>
 
@@ -529,7 +526,7 @@ export const LeadReservationForm: React.FC<LeadReservationFormProps> = ({
             </span>
             <div className="flex items-baseline gap-2">
               <span className="text-xl font-bold font-serif text-amber-400">$10 CAD</span>
-              <span className="text-stone-500 line-through text-xs font-mono">$180 CAD</span>
+              <span className="text-stone-500 line-through text-xs font-mono">$350 CAD</span>
             </div>
           </div>
 

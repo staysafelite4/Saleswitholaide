@@ -53,7 +53,7 @@ export const JumiaCheckoutModal: React.FC<JumiaCheckoutModalProps> = ({
   
   const subtotal = items.reduce((sum, item) => sum + item.product.price * item.quantity, 0);
   const deliveryFee = deliveryType === 'door_delivery' ? selectedStateObj.expressFee : selectedStateObj.standardFee;
-  const isFreeDelivery = subtotal >= 50000;
+  const isFreeDelivery = subtotal >= 100;
   const actualDeliveryFee = isFreeDelivery ? 0 : deliveryFee;
   const grandTotal = Math.max(0, subtotal + actualDeliveryFee - voucherDiscount);
 
@@ -256,7 +256,7 @@ export const JumiaCheckoutModal: React.FC<JumiaCheckoutModalProps> = ({
 
             <div className="pt-3 border-t border-stone-200 flex items-center justify-between">
               <span className="text-xs text-stone-500">
-                Total to pay: <strong className="text-stone-900 font-bold">₦{grandTotal.toLocaleString()}</strong>
+                Total to pay: <strong className="text-stone-900 font-bold">${grandTotal.toLocaleString()} CAD</strong>
               </span>
               <button
                 type="submit"
@@ -301,7 +301,7 @@ export const JumiaCheckoutModal: React.FC<JumiaCheckoutModalProps> = ({
                       <span className="bg-[#F68B1E] text-white text-[9px] font-black px-1.5 py-0.2 rounded">FASTEST</span>
                     </div>
                     <span className="font-bold text-xs sm:text-sm text-stone-900">
-                      {isFreeDelivery ? 'FREE' : `₦${selectedStateObj.expressFee.toLocaleString()}`}
+                      {isFreeDelivery ? 'FREE' : `$${selectedStateObj.expressFee.toLocaleString()} CAD`}
                     </span>
                   </div>
                   <p className="text-xs text-stone-500 mt-1">
@@ -330,7 +330,7 @@ export const JumiaCheckoutModal: React.FC<JumiaCheckoutModalProps> = ({
                   <div className="flex items-center justify-between">
                     <span className="font-bold text-xs sm:text-sm text-stone-900">Jumia Pickup Station (LGA Hub)</span>
                     <span className="font-bold text-xs sm:text-sm text-stone-900">
-                      ₦{selectedStateObj.standardFee.toLocaleString()}
+                      ${selectedStateObj.standardFee.toLocaleString()} CAD
                     </span>
                   </div>
                   <p className="text-xs text-stone-500 mt-1">
@@ -454,21 +454,21 @@ export const JumiaCheckoutModal: React.FC<JumiaCheckoutModalProps> = ({
             <div className="bg-stone-50 p-3.5 rounded border border-stone-200 space-y-1.5 text-xs">
               <div className="flex justify-between text-stone-600">
                 <span>Items Subtotal ({items.length} items)</span>
-                <span>₦{subtotal.toLocaleString()}</span>
+                <span>${subtotal.toLocaleString()} CAD</span>
               </div>
               <div className="flex justify-between text-stone-600">
                 <span>Delivery Fee ({address.state})</span>
-                <span>{actualDeliveryFee === 0 ? 'FREE' : `₦${actualDeliveryFee.toLocaleString()}`}</span>
+                <span>{actualDeliveryFee === 0 ? 'FREE' : `$${actualDeliveryFee.toLocaleString()} CAD`}</span>
               </div>
               {voucherDiscount > 0 && (
                 <div className="flex justify-between text-emerald-700 font-semibold">
                   <span>Voucher Discount</span>
-                  <span>-₦{voucherDiscount.toLocaleString()}</span>
+                  <span>-${voucherDiscount.toLocaleString()} CAD</span>
                 </div>
               )}
               <div className="flex justify-between text-stone-900 font-black text-sm pt-2 border-t border-stone-200">
                 <span>Total Amount Due</span>
-                <span className="text-[#F68B1E]">₦{grandTotal.toLocaleString()}</span>
+                <span className="text-[#F68B1E]">${grandTotal.toLocaleString()} CAD</span>
               </div>
             </div>
 
@@ -526,7 +526,7 @@ export const JumiaCheckoutModal: React.FC<JumiaCheckoutModalProps> = ({
               </div>
               <div className="flex justify-between pt-2 border-t border-stone-200 text-stone-900 font-bold">
                 <span>Total Amount:</span>
-                <span className="text-[#F68B1E]">₦{createdOrder.total.toLocaleString()}</span>
+                <span className="text-[#F68B1E]">${createdOrder.total.toLocaleString()} CAD</span>
               </div>
             </div>
 

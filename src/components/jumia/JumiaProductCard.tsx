@@ -83,11 +83,11 @@ export const JumiaProductCard: React.FC<JumiaProductCardProps> = ({
       <div className="mt-auto pt-1">
         <div className="flex items-baseline gap-2">
           <span className="text-base sm:text-lg font-black text-stone-900">
-            $ {product.price.toLocaleString()}
+            ${product.price.toLocaleString()} CAD
           </span>
           {product.oldPrice > product.price && (
             <span className="text-xs text-stone-400 line-through">
-              $ {product.oldPrice.toLocaleString()}
+              ${product.oldPrice.toLocaleString()} CAD
             </span>
           )}
         </div>

@@ -161,18 +161,18 @@ export const FashionProvider: React.FC<{ children: React.ReactNode }> = ({ child
   let bagShippingFee = 0;
   if (bagSubtotal > 0) {
     if (selectedShippingTier === 'lagos_express') {
-      bagShippingFee = bagSubtotal >= (config.freeShippingThreshold || 50000) ? 0 : (config.baseShippingFee || 2500);
+      bagShippingFee = bagSubtotal >= (config.freeShippingThreshold || 120) ? 0 : (config.baseShippingFee || 10);
     } else if (selectedShippingTier === 'nationwide') {
-      bagShippingFee = config.nationwideShippingFee || 4500;
+      bagShippingFee = config.nationwideShippingFee || 15;
     } else if (selectedShippingTier === 'international') {
-      bagShippingFee = config.internationalShippingFee || 18000;
+      bagShippingFee = config.internationalShippingFee || 25;
     }
   }
   const bagTotal = bagSubtotal + bagShippingFee;
 
   const formatCurrency = (amount: number): string => {
-    const symbol = config.currencySymbol || '$';
-    return `${symbol}${Math.round(amount).toLocaleString('en-US')}`;
+    const symbol = config.currencySymbol && config.currencySymbol !== '₦' ? config.currencySymbol : '$';
+    return `${symbol}${Math.round(amount).toLocaleString('en-US')} CAD`;
   };
 
   const updateConfig = (updates: Partial<BoutiqueConfig>) => {

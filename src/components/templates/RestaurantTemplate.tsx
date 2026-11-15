@@ -344,7 +344,7 @@ const RestaurantInner: React.FC = () => {
                     Signature Bukka Masterpiece
                   </span>
                   <p className="text-lg font-serif font-bold text-white">Egusi Soup & Pounded Yam</p>
-                  <p className="font-mono text-xs text-amber-300 mt-0.5">{formatCurrency(6500)}</p>
+                  <p className="font-mono text-xs text-amber-300 mt-0.5">{formatCurrency(18)}</p>
                 </div>
                 <button
                   onClick={() => openCustomizer(dishes[0])}
@@ -579,7 +579,7 @@ const RestaurantInner: React.FC = () => {
                 onClick={() => openCustomizer(dishes.find(d => d.id === 'dish_jollof_party_cooler') || dishes[0])}
                 className="px-6 py-3.5 bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold rounded-lg text-xs flex items-center gap-2 cursor-pointer shadow-md shadow-amber-500/20"
               >
-                <span>Order 5L Party Cooler ({formatCurrency(45000)})</span>
+                <span>Order 5L Party Cooler ({formatCurrency(110)})</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
             </div>
@@ -598,7 +598,7 @@ const RestaurantInner: React.FC = () => {
                   <p className="font-serif font-bold text-white">5L Firewood Party Jollof Cooler</p>
                   <p className="text-xs text-stone-400">Includes 10x Peppered Chicken + Fried Dodo</p>
                 </div>
-                <span className="font-mono text-base font-bold text-amber-400">{formatCurrency(45000)}</span>
+                <span className="font-mono text-base font-bold text-amber-400">{formatCurrency(110)}</span>
               </div>
             </div>
           </div>

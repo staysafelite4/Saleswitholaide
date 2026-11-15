@@ -58,9 +58,9 @@ const SpaInner: React.FC = () => {
   ];
 
   const addOnOptions = [
-    { label: 'Warm Herbal Foot Bath (+₦3,500)', value: 'Herbal Foot Bath' },
-    { label: '15-Min Scalp Acupressure (+₦5,000)', value: 'Scalp Acupressure' },
-    { label: 'Cold Jade Eye Depuffing (+₦4,000)', value: 'Jade Eye Depuff' }
+    { label: 'Warm Herbal Foot Bath (+$10 CAD)', value: 'Herbal Foot Bath' },
+    { label: '15-Min Scalp Acupressure (+$15 CAD)', value: 'Scalp Acupressure' },
+    { label: 'Cold Jade Eye Depuffing (+$12 CAD)', value: 'Jade Eye Depuff' }
   ];
 
   const filteredTreatments = treatments.filter(
@@ -338,7 +338,7 @@ const SpaInner: React.FC = () => {
 
             <div className="pt-2 flex items-center gap-4">
               <span className="font-mono text-2xl font-bold text-emerald-900">
-                {formatCurrency(75000)}
+                {formatCurrency(140)}
               </span>
               <button
                 onClick={() => {

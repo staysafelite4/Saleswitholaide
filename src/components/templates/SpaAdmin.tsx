@@ -59,7 +59,7 @@ export const SpaAdmin: React.FC = () => {
   const [newTitle, setNewTitle] = useState('');
   const [newTagline, setNewTagline] = useState('');
   const [newDesc, setNewDesc] = useState('');
-  const [newPrice, setNewPrice] = useState(30000);
+  const [newPrice, setNewPrice] = useState(75);
   const [newDuration, setNewDuration] = useState('60 Minutes');
   const [newCategory, setNewCategory] = useState<SpaTreatment['category']>('massage');
   const [newImage, setNewImage] = useState(SPA_OIL_IMAGE);
@@ -103,7 +103,7 @@ export const SpaAdmin: React.FC = () => {
       title: newTitle,
       tagline: newTagline || 'Holistic Botanical Ritual',
       description: newDesc || 'Tailored therapy for mind and body relaxation.',
-      price: Number(newPrice) || 30000,
+      price: Number(newPrice) || 75,
       duration: newDuration,
       category: newCategory,
       image: newImage,
@@ -115,7 +115,7 @@ export const SpaAdmin: React.FC = () => {
 
     setIsAddingT(false);
     setNewTitle('');
-    setNewPrice(30000);
+    setNewPrice(75);
   };
 
   const handleSaveEdit = (e: React.FormEvent) => {

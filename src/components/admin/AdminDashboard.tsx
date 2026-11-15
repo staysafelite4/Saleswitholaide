@@ -69,7 +69,7 @@ export const AdminDashboard: React.FC = () => {
   const [newProdName, setNewProdName] = useState('');
   const [newProdTagline, setNewProdTagline] = useState('');
   const [newProdDesc, setNewProdDesc] = useState('');
-  const [newProdPrice, setNewProdPrice] = useState(2500);
+  const [newProdPrice, setNewProdPrice] = useState(25);
   const [newProdComparePrice, setNewProdComparePrice] = useState<number | undefined>(undefined);
   const [newProdSize, setNewProdSize] = useState('500ml Bottle');
   const [newProdCategory, setNewProdCategory] = useState<Product['category']>('bottles');
@@ -133,7 +133,7 @@ export const AdminDashboard: React.FC = () => {
       name: newProdName,
       tagline: newProdTagline || 'Handcrafted Hibiscus Tonic',
       description: newProdDesc || 'Artisanal Nigerian zobo brewed fresh with natural spices.',
-      price: Number(newProdPrice) || 2500,
+      price: Number(newProdPrice) || 25,
       compareAtPrice: newProdComparePrice ? Number(newProdComparePrice) : undefined,
       size: newProdSize,
       volume: newProdSize,
@@ -151,7 +151,7 @@ export const AdminDashboard: React.FC = () => {
     setNewProdName('');
     setNewProdTagline('');
     setNewProdDesc('');
-    setNewProdPrice(2500);
+    setNewProdPrice(25);
   };
 
   const handleSaveEditProduct = (e: React.FormEvent) => {
@@ -782,11 +782,7 @@ export const AdminDashboard: React.FC = () => {
                           onChange={(e) => updateSiteConfig({ currencySymbol: e.target.value })}
                           className="w-full px-3 py-2 bg-white border border-stone-200 rounded-lg text-stone-900 font-mono font-bold focus:outline-none focus:border-[#720026]"
                         >
-                          <option value="₦">₦ (Nigerian Naira - NGN)</option>
-                          <option value="$">$ (US Dollar - USD)</option>
-                          <option value="£">£ (British Pound - GBP)</option>
-                          <option value="€">€ (Euro - EUR)</option>
-                          <option value="GH₵">GH₵ (Ghanaian Cedi - GHS)</option>
+                          <option value="$">$ (Canadian Dollar - CAD)</option>
                         </select>
                       </div>
 

@@ -299,7 +299,7 @@ export const AdminLeadsModal: React.FC<AdminLeadsModalProps> = ({ isOpen, onClos
                         <span className="text-stone-500 block text-[10px] uppercase font-mono">Template & Price</span>
                         <span className="text-stone-200 font-medium">{lead.templateName}</span>
                         <div className="text-emerald-400 font-mono font-bold mt-0.5">
-                          {lead.lockedPriceCAD ? `$${lead.lockedPriceCAD} CAD` : '$10 CAD'} (Saved ${(lead.originalPriceCAD || 180) - (lead.lockedPriceCAD || 10)} CAD)
+                          {lead.lockedPriceCAD ? `$${lead.lockedPriceCAD} CAD` : '$10 CAD'} (Saved ${(lead.originalPriceCAD || 350) - (lead.lockedPriceCAD || 10)} CAD)
                         </div>
                       </div>
                     </div>

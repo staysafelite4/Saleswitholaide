@@ -40,8 +40,8 @@ export const JumiaSellerModal: React.FC<JumiaSellerModalProps> = ({
   const [newName, setNewName] = useState('');
   const [newBrand, setNewBrand] = useState('Master Chef');
   const [newCategory, setNewCategory] = useState<JumiaProduct['category']>('Cookware & Pots');
-  const [newPrice, setNewPrice] = useState('18500');
-  const [newOldPrice, setNewOldPrice] = useState('28000');
+  const [newPrice, setNewPrice] = useState('35');
+  const [newOldPrice, setNewOldPrice] = useState('55');
   const [newStock, setNewStock] = useState('20');
   const [newIsExpress, setNewIsExpress] = useState(true);
   const [newIsFlash, setNewIsFlash] = useState(false);
@@ -54,8 +54,8 @@ export const JumiaSellerModal: React.FC<JumiaSellerModalProps> = ({
     e.preventDefault();
     if (!newName.trim()) return;
 
-    const price = Number(newPrice) || 10000;
-    const oldPrice = Number(newOldPrice) || price * 1.3;
+    const price = Number(newPrice) || 25;
+    const oldPrice = Number(newOldPrice) || Math.round(price * 1.3);
     const discount = Math.round(((oldPrice - price) / oldPrice) * 100);
 
     const newProd: JumiaProduct = {
@@ -213,8 +213,8 @@ export const JumiaSellerModal: React.FC<JumiaSellerModalProps> = ({
                     {/* Price and Badges */}
                     <div className="flex items-center gap-3 shrink-0">
                       <div className="text-right">
-                        <div className="font-black text-stone-900">${prod.price.toLocaleString()}</div>
-                        <div className="text-[10px] text-stone-400 line-through">${prod.oldPrice.toLocaleString()}</div>
+                        <div className="font-black text-stone-900">${prod.price.toLocaleString()} CAD</div>
+                        <div className="text-[10px] text-stone-400 line-through">${prod.oldPrice.toLocaleString()} CAD</div>
                       </div>
 
                       {/* Flash Sale Toggle */}
@@ -315,7 +315,7 @@ export const JumiaSellerModal: React.FC<JumiaSellerModalProps> = ({
 
               <div className="grid grid-cols-3 gap-4">
                 <div>
-                  <label className="block font-semibold text-stone-700 mb-1">Selling Price (₦) *</label>
+                  <label className="block font-semibold text-stone-700 mb-1">Selling Price ($ CAD) *</label>
                   <input
                     type="number"
                     required
@@ -326,7 +326,7 @@ export const JumiaSellerModal: React.FC<JumiaSellerModalProps> = ({
                 </div>
 
                 <div>
-                  <label className="block font-semibold text-stone-700 mb-1">Original Price (₦)</label>
+                  <label className="block font-semibold text-stone-700 mb-1">Original Price ($ CAD)</label>
                   <input
                     type="number"
                     value={newOldPrice}

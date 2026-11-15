@@ -44,7 +44,7 @@ export const ShowcaseHome: React.FC<ShowcaseHomeProps> = ({ onSelectTemplate }) 
   // Admin Leads Modal
   const [isAdminLeadsOpen, setIsAdminLeadsOpen] = useState(false);
   const [capturedLeadsCount, setCapturedLeadsCount] = useState<number>(0);
-  const [remainingSlots, setRemainingSlots] = useState<number>(14);
+  const [remainingSlots, setRemainingSlots] = useState<number>(13);
 
   // Countdown timer state to November 29, 2026
   const [timeLeft, setTimeLeft] = useState<{
@@ -104,18 +104,18 @@ export const ShowcaseHome: React.FC<ShowcaseHomeProps> = ({ onSelectTemplate }) 
         }
 
         const storedSlots = localStorage.getItem('codezilla_remaining_slots');
-        if (storedSlots) {
+        if (storedSlots && storedSlots !== '14') {
           const parsed = parseInt(storedSlots, 10);
           if (!isNaN(parsed) && parsed >= 0) {
             setRemainingSlots(parsed);
           }
         } else {
-          localStorage.setItem('codezilla_remaining_slots', '14');
-          setRemainingSlots(14);
+          localStorage.setItem('codezilla_remaining_slots', '13');
+          setRemainingSlots(13);
         }
       } catch {
         setCapturedLeadsCount(0);
-        setRemainingSlots(14);
+        setRemainingSlots(13);
       }
     };
 
@@ -155,10 +155,10 @@ export const ShowcaseHome: React.FC<ShowcaseHomeProps> = ({ onSelectTemplate }) 
           <div className="flex items-center gap-2 font-medium">
             <span className="flex h-2 w-2 rounded-full bg-rose-500 animate-ping" />
             <span className="font-bold text-amber-300 uppercase tracking-wider text-[11px]">
-              Special Subsidized Promo Slashed from $180 CAD to Just $10 CAD:
+              Special Subsidized Promo Slashed from $350 CAD to Just $10 CAD:
             </span>
             <span className="text-stone-300 hidden md:inline">
-              Offer ends November 29th. Only {remainingSlots} subsidized slots left!
+              Offer ends November 29th · {remainingSlots} slots left!
             </span>
           </div>
 
@@ -195,7 +195,7 @@ export const ShowcaseHome: React.FC<ShowcaseHomeProps> = ({ onSelectTemplate }) 
             <div className="flex flex-col">
               <span className="leading-none">{AGENCY_CONFIG.name}</span>
               <span className="text-[9px] font-mono uppercase tracking-widest text-amber-800 mt-1 font-bold">
-                $10 CAD Promo · Ends Nov 29 ({remainingSlots} Slots Left)
+                $10 CAD Promo · Ends Nov 29 ({remainingSlots} slots left)
               </span>
             </div>
           </a>
@@ -205,7 +205,7 @@ export const ShowcaseHome: React.FC<ShowcaseHomeProps> = ({ onSelectTemplate }) 
             <a href="#offer" className="hover:text-stone-950 transition-colors">The $10 CAD Offer</a>
             <a href="#reserve" className="text-amber-800 font-bold hover:text-stone-950 transition-colors flex items-center gap-1">
               <Flame className="w-3.5 h-3.5 text-rose-600" />
-              <span>Reserve Slot ({remainingSlots} Left)</span>
+              <span>Reserve Slot ({remainingSlots} slots left)</span>
             </a>
             <a href="#templates" className="hover:text-stone-950 transition-colors">Live Templates</a>
             <a href="#compare" className="hover:text-stone-950 transition-colors">Compare Value</a>
@@ -254,7 +254,7 @@ export const ShowcaseHome: React.FC<ShowcaseHomeProps> = ({ onSelectTemplate }) 
               <span className="text-amber-400 underline decoration-rose-500 decoration-wavy decoration-2">
                 $10 CAD
               </span>{' '}
-              — Slashed from <span className="line-through text-stone-500 font-mono text-3xl sm:text-4xl">$180 CAD</span>.
+              — Slashed from <span className="line-through text-stone-500 font-mono text-3xl sm:text-4xl">$350 CAD</span>.
             </h1>
 
             <p className="text-base sm:text-lg text-stone-300 max-w-2xl leading-relaxed">
@@ -268,7 +268,7 @@ export const ShowcaseHome: React.FC<ShowcaseHomeProps> = ({ onSelectTemplate }) 
                   Normal Agency Cost
                 </span>
                 <span className="line-through text-stone-500 font-mono text-xl font-bold">
-                  $180 CAD
+                  $350 CAD
                 </span>
               </div>
               <div className="text-stone-600 font-bold text-2xl">→</div>
@@ -279,12 +279,9 @@ export const ShowcaseHome: React.FC<ShowcaseHomeProps> = ({ onSelectTemplate }) 
                 <span className="text-3xl font-serif font-bold text-amber-400">
                   $10 CAD
                 </span>
-                <span className="text-stone-400 font-mono text-xs ml-1.5">
-                  (approx. ₦5,000 NGN / $3.50 USD / €3.50 EUR / £3 GBP)
-                </span>
               </div>
               <div className="px-3 py-1 bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 rounded-lg text-xs font-bold">
-                94% OFF
+                97% OFF
               </div>
             </div>
 
@@ -344,7 +341,7 @@ export const ShowcaseHome: React.FC<ShowcaseHomeProps> = ({ onSelectTemplate }) 
               The Transparent Truth
             </span>
             <h2 className="text-3xl sm:text-4xl font-serif font-bold text-stone-950">
-              Why Pay $180 CAD When You Can Launch for $10 CAD?
+              Why Pay $350 CAD When You Can Launch for $10 CAD?
             </h2>
             <p className="text-stone-600 text-sm">
               See how our subsidized promo compares to typical agency quotes and DIY website builders.
@@ -362,7 +359,7 @@ export const ShowcaseHome: React.FC<ShowcaseHomeProps> = ({ onSelectTemplate }) 
                   The Old Expensive Way
                 </h3>
                 <p className="font-mono text-3xl font-bold text-stone-400 mt-2 line-through">
-                  $180+ CAD
+                  $350+ CAD
                 </p>
                 <p className="text-xs text-stone-500 mt-0.5">+ $39/month recurring hosting fees</p>
               </div>
@@ -390,7 +387,7 @@ export const ShowcaseHome: React.FC<ShowcaseHomeProps> = ({ onSelectTemplate }) 
             {/* The SalesWithOlaide $10 CAD Promo Way */}
             <div className="p-8 rounded-2xl border-2 border-stone-950 bg-[#161310] text-white shadow-2xl space-y-6 relative">
               <div className="absolute -top-3.5 right-6 bg-amber-500 text-stone-950 text-[10px] font-mono font-bold uppercase tracking-widest px-3 py-1 rounded-full shadow-md">
-                🔥 Subsidized Until Nov 29 ({remainingSlots} Slots Remaining)
+                🔥 Subsidized Until Nov 29 ({remainingSlots} slots left)
               </div>
 
               <div>
@@ -451,13 +448,13 @@ export const ShowcaseHome: React.FC<ShowcaseHomeProps> = ({ onSelectTemplate }) 
           <div className="text-center max-w-3xl mx-auto space-y-3">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-950/80 border border-amber-500/40 text-amber-300 text-xs font-bold">
               <Gift className="w-3.5 h-3.5 text-amber-400" />
-              <span>OFFICIAL $10 CAD SLOT RESERVATION DESK ({remainingSlots} SLOTS REMAINING)</span>
+              <span>OFFICIAL $10 CAD SLOT RESERVATION DESK ({remainingSlots} SLOTS LEFT)</span>
             </div>
             <h2 className="text-3xl sm:text-5xl font-serif font-bold text-white tracking-tight">
               Reserve Your Turnkey Website Slot Before November 29th
             </h2>
             <p className="text-sm sm:text-base text-stone-300 leading-relaxed">
-              Don’t let your business miss out on online sales. Fill in your business details and contact info below to reserve your slot and lock in the $10 CAD subsidized price (normally $180 CAD).
+              Don’t let your business miss out on online sales. Fill in your business details and contact info below to reserve your slot and lock in the $10 CAD subsidized price (normally $350 CAD).
             </p>
           </div>
 
@@ -642,10 +639,10 @@ export const ShowcaseHome: React.FC<ShowcaseHomeProps> = ({ onSelectTemplate }) 
             <div className="p-5 bg-stone-50 rounded-2xl border border-stone-200 space-y-2">
               <h3 className="font-serif font-bold text-sm text-stone-950 flex items-center gap-2">
                 <HelpCircle className="w-4 h-4 text-amber-700 shrink-0" />
-                <span>Why did you slash the price from $180 CAD to just $10 CAD?</span>
+                <span>Why did you slash the price from $350 CAD to just $10 CAD?</span>
               </h3>
               <p className="text-stone-600 leading-relaxed pl-6">
-                We believe every single business owner — whether you run a restaurant, fashion boutique, drink brand, or wellness salon — deserves to be online without paying hundreds of dollars or exorbitant monthly SaaS fees. This is our business empowerment initiative running until <strong>November 29th</strong>. Only {remainingSlots} slots remain!
+                We believe every single business owner — whether you run a restaurant, fashion boutique, drink brand, or wellness salon — deserves to be online without paying hundreds of dollars or exorbitant monthly SaaS fees. This is our business empowerment initiative running until <strong>November 29th</strong>. {remainingSlots} slots left!
               </p>
             </div>
 
@@ -687,7 +684,7 @@ export const ShowcaseHome: React.FC<ShowcaseHomeProps> = ({ onSelectTemplate }) 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center space-y-6">
           <div className="inline-block p-2 rounded-xl bg-stone-900 border border-stone-800">
             <span className="font-mono text-xs text-amber-400 font-bold">
-              ⏳ Promo Ends November 29th Sharp · Only {remainingSlots} Slots Left
+              ⏳ Promo Ends November 29th Sharp · {remainingSlots} slots left
             </span>
           </div>
 
@@ -743,11 +740,11 @@ export const ShowcaseHome: React.FC<ShowcaseHomeProps> = ({ onSelectTemplate }) 
                 <p className="font-serif font-bold text-white text-sm">
                   Special $10 CAD Business Website Promo{' '}
                   <span className="line-through text-stone-500 font-mono text-xs font-normal">
-                    (Was $180 CAD)
+                    (Was $350 CAD)
                   </span>
                 </p>
                 <p className="text-[11px] text-stone-400">
-                  Subsidized link: <span className="font-mono text-amber-300">yourbusiness.vercel.app</span> · Delivered in 48 Hours · Only {remainingSlots} Slots Remaining!
+                  Subsidized link: <span className="font-mono text-amber-300">yourbusiness.vercel.app</span> · Delivered in 48 Hours · {remainingSlots} slots left!
                 </p>
               </div>
             </div>
@@ -758,7 +755,7 @@ export const ShowcaseHome: React.FC<ShowcaseHomeProps> = ({ onSelectTemplate }) 
                 className="px-5 py-2.5 bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold rounded-lg text-xs flex items-center gap-1.5 shadow-md cursor-pointer transition-all"
               >
                 <Flame className="w-3.5 h-3.5 fill-stone-950" />
-                <span>Reserve $10 CAD Slot Now ({remainingSlots} Left)</span>
+                <span>Reserve $10 CAD Slot Now ({remainingSlots} slots left)</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </a>
             </div>

@@ -2,12 +2,10 @@ import React, { createContext, useContext, useState, useEffect } from 'react';
 import { Product, SiteConfig, CartItem, OrderLog, ProductAvailability } from '../types';
 import { INITIAL_PRODUCTS, INITIAL_SITE_CONFIG, INITIAL_ORDERS } from '../data/initialData';
 
-export type CurrencyCode = 'CAD' | 'USD' | 'GBP';
+export type CurrencyCode = 'CAD';
 
 export const CURRENCY_INFO: Record<CurrencyCode, { symbol: string; code: CurrencyCode; rate: number; flag: string; name: string }> = {
-  CAD: { symbol: '$', code: 'CAD', rate: 1.0, flag: '🇨🇦', name: 'Canadian Dollar' },
-  USD: { symbol: '$', code: 'USD', rate: 0.74, flag: '🇺🇸', name: 'US Dollar' },
-  GBP: { symbol: '£', code: 'GBP', rate: 0.58, flag: '🇬🇧', name: 'British Pound' }
+  CAD: { symbol: '$', code: 'CAD', rate: 1.0, flag: '🇨🇦', name: 'Canadian Dollar' }
 };
 
 interface StoreContextType {
@@ -103,19 +101,12 @@ export const StoreProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     }
   });
 
-  const [currency, setCurrencyState] = useState<CurrencyCode>(() => {
-    try {
-      const stored = localStorage.getItem(STORAGE_KEYS.CURRENCY) as CurrencyCode;
-      return (stored && CURRENCY_INFO[stored]) ? stored : 'CAD';
-    } catch (e) {
-      return 'CAD';
-    }
-  });
+  const [currency, setCurrencyState] = useState<CurrencyCode>('CAD');
 
-  const setCurrency = (curr: CurrencyCode) => {
-    setCurrencyState(curr);
+  const setCurrency = (_curr: CurrencyCode) => {
+    setCurrencyState('CAD');
     try {
-      localStorage.setItem(STORAGE_KEYS.CURRENCY, curr);
+      localStorage.setItem(STORAGE_KEYS.CURRENCY, 'CAD');
     } catch (e) {
       console.error('Failed to save currency choice', e);
     }
@@ -317,9 +308,9 @@ export const StoreProvider: React.FC<{ children: React.ReactNode }> = ({ childre
           `${idx + 1}. *${item.product.name}* (${item.product.size})\n   • Qty: ${item.quantity} × ${formatCurrency(item.product.price, 'CAD')} = ${formatCurrency(item.quantity * item.product.price, 'CAD')}\n   • Prep: ${item.temperaturePreference || 'Ice Cold'}, ${item.selectedSweetness || 'Standard'}`
       ),
       `━━━━━━━━━━━━━━━━━━`,
-      `Subtotal: ${formatCurrency(cartSubtotal, 'CAD')}` + (currency !== 'CAD' ? ` (${formatCurrency(cartSubtotal, currency)})` : ''),
+      `Subtotal: ${formatCurrency(cartSubtotal, 'CAD')}`,
       `Delivery Fee: ${cartDeliveryFee === 0 ? 'FREE' : formatCurrency(cartDeliveryFee, 'CAD')}`,
-      `*TOTAL DUE:* *${formatCurrency(cartTotal, 'CAD')}*` + (currency !== 'CAD' ? ` (${formatCurrency(cartTotal, currency)})` : ''),
+      `*TOTAL DUE:* *${formatCurrency(cartTotal, 'CAD')}*`,
       `━━━━━━━━━━━━━━━━━━`,
       `✨ Please confirm availability & payment instructions to complete. Thank you!`
     ].filter(Boolean);

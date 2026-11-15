@@ -161,8 +161,8 @@ export const JumiaHeader: React.FC<JumiaHeaderProps> = ({
                           <div className="flex-1 min-w-0">
                             <p className="font-medium text-stone-900 truncate">{product.name}</p>
                             <div className="flex items-center gap-2 mt-0.5">
-                              <span className="font-bold text-[#F68B1E]">₦{product.price.toLocaleString()}</span>
-                              <span className="text-[11px] text-stone-400 line-through">₦{product.oldPrice.toLocaleString()}</span>
+                              <span className="font-bold text-[#F68B1E]">${product.price.toLocaleString()} CAD</span>
+                              <span className="text-[11px] text-stone-400 line-through">${product.oldPrice.toLocaleString()} CAD</span>
                               <span className="text-[10px] bg-amber-100 text-[#F68B1E] font-bold px-1 rounded">-{product.discountPercent}%</span>
                             </div>
                           </div>

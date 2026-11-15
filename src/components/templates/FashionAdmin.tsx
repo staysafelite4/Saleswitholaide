@@ -66,8 +66,8 @@ export const FashionAdmin: React.FC = () => {
   const [newName, setNewName] = useState('');
   const [newTagline, setNewTagline] = useState('');
   const [newDesc, setNewDesc] = useState('');
-  const [newPrice, setNewPrice] = useState(38000);
-  const [newComparePrice, setNewComparePrice] = useState<number | undefined>(45000);
+  const [newPrice, setNewPrice] = useState(95);
+  const [newComparePrice, setNewComparePrice] = useState<number | undefined>(125);
   const [newCategory, setNewCategory] = useState<Garment['category']>('dresses');
   const [newImage, setNewImage] = useState(FASHION_DRESS_IMAGE);
   const [newFabric, setNewFabric] = useState('22-Momme 100% Pure Mulberry Silk');
@@ -112,7 +112,7 @@ export const FashionAdmin: React.FC = () => {
       name: newName,
       tagline: newTagline || 'Tailored Quiet Luxury Garment',
       description: newDesc || 'Hand-finished in our Lekki atelier with delicate French seams.',
-      price: Number(newPrice) || 38000,
+      price: Number(newPrice) || 95,
       compareAtPrice: newComparePrice ? Number(newComparePrice) : undefined,
       category: newCategory,
       image: newImage,
@@ -136,7 +136,7 @@ export const FashionAdmin: React.FC = () => {
     setNewName('');
     setNewTagline('');
     setNewDesc('');
-    setNewPrice(38000);
+    setNewPrice(95);
   };
 
   const handleSaveEdit = (e: React.FormEvent) => {

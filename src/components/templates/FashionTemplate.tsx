@@ -347,7 +347,7 @@ const FashionInner: React.FC = () => {
                 <span className="text-[10px] uppercase font-mono tracking-widest text-amber-200 font-bold">Featured Signature Piece</span>
                 <h2 className="text-xl font-serif font-bold text-white mt-0.5">Architectural Champagne Silk Slip Dress</h2>
                 <div className="flex items-center justify-between mt-2 pt-2 border-t border-white/20">
-                  <span className="font-mono text-base font-bold text-white">{formatCurrency(48000)}</span>
+                  <span className="font-mono text-base font-bold text-white">{formatCurrency(120)}</span>
                   <a
                     href="#collection"
                     className="text-xs font-semibold underline text-stone-200 hover:text-white"
@@ -953,7 +953,7 @@ const FashionInner: React.FC = () => {
                   <p className="text-stone-500">Abuja, Port Harcourt, Ibadan, Enugu (48-72 hrs)</p>
                 </div>
                 <div className="text-right">
-                  <p className="font-mono font-bold text-stone-950">{formatCurrency(config.nationwideShippingFee || 4500)}</p>
+                  <p className="font-mono font-bold text-stone-950">{formatCurrency(config.nationwideShippingFee || 15)}</p>
                 </div>
               </div>
 
@@ -963,7 +963,7 @@ const FashionInner: React.FC = () => {
                   <p className="text-stone-500">UK, USA, Canada, UAE, Europe (3-5 business days)</p>
                 </div>
                 <div className="text-right">
-                  <p className="font-mono font-bold text-stone-950">{formatCurrency(config.internationalShippingFee || 18000)}</p>
+                  <p className="font-mono font-bold text-stone-950">{formatCurrency(config.internationalShippingFee || 25)}</p>
                 </div>
               </div>
             </div>
@@ -1475,7 +1475,7 @@ const FashionInner: React.FC = () => {
                           <span className="block text-[10px] opacity-75">Same-day / 24 hrs</span>
                         </div>
                         <span className="font-mono">
-                          {bagSubtotal >= (config.freeShippingThreshold || 50000) ? 'FREE' : formatCurrency(config.baseShippingFee)}
+                          {bagSubtotal >= (config.freeShippingThreshold || 120) ? 'FREE' : formatCurrency(config.baseShippingFee)}
                         </span>
                       </label>
 
@@ -1491,7 +1491,7 @@ const FashionInner: React.FC = () => {
                           <span>Nationwide Priority Courier</span>
                           <span className="block text-[10px] opacity-75">Abuja, PH, Ibadan, etc.</span>
                         </div>
-                        <span className="font-mono">{formatCurrency(config.nationwideShippingFee || 4500)}</span>
+                        <span className="font-mono">{formatCurrency(config.nationwideShippingFee || 15)}</span>
                       </label>
 
                       <label
@@ -1504,9 +1504,9 @@ const FashionInner: React.FC = () => {
                       >
                         <div>
                           <span>International DHL Express</span>
-                          <span className="block text-[10px] opacity-75">UK, USA, Canada, UAE (3-5 days)</span>
+                          <span className="block text-[10px] opacity-75">Canada, USA, UK, UAE (3-5 days)</span>
                         </div>
-                        <span className="font-mono">{formatCurrency(config.internationalShippingFee || 18000)}</span>
+                        <span className="font-mono">{formatCurrency(config.internationalShippingFee || 25)}</span>
                       </label>
                     </div>
                   </div>
@@ -1563,7 +1563,7 @@ const FashionInner: React.FC = () => {
                         <option value="Instant Bank Transfer">Instant Bank Transfer (GTBank / Providus / Zenith)</option>
                         <option value="Online Card Payment">Online Card Payment via Verified Link</option>
                         <option value="POS on Delivery (Lagos Only)">POS Terminal on Delivery (Lagos Only)</option>
-                        <option value="International Wire (USD/GBP)">International Wire / USD Remittance</option>
+                        <option value="Interac e-Transfer / CAD Remittance">Interac e-Transfer / CAD Remittance</option>
                       </select>
                     </div>
 

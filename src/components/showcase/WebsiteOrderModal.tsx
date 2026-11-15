@@ -101,7 +101,7 @@ export const WebsiteOrderModal: React.FC<WebsiteOrderModalProps> = ({
     // Decrement remaining slots count
     try {
       const stored = localStorage.getItem('codezilla_remaining_slots');
-      const current = stored ? parseInt(stored, 10) : 14;
+      const current = stored && stored !== '14' ? parseInt(stored, 10) : 13;
       const updated = Math.max(1, current - 1);
       localStorage.setItem('codezilla_remaining_slots', updated.toString());
       window.dispatchEvent(new Event('slotCountUpdated'));

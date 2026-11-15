@@ -33,7 +33,7 @@ export const CartDrawer: React.FC = () => {
 
   if (!isCartOpen) return null;
 
-  const freeDeliveryThreshold = siteConfig.freeDeliveryThreshold || 20000;
+  const freeDeliveryThreshold = siteConfig.freeDeliveryThreshold || 100;
   const remainingForFree = Math.max(0, freeDeliveryThreshold - cartSubtotal);
 
   const handleCheckout = (e: React.FormEvent) => {

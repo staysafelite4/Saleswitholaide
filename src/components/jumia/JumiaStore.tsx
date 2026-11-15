@@ -43,7 +43,7 @@ export const JumiaStore: React.FC = () => {
   const [expressOnly, setExpressOnly] = useState(false);
   const [flashSaleOnly, setFlashSaleOnly] = useState(false);
   const [sortBy, setSortBy] = useState<'popularity' | 'price_low' | 'price_high' | 'rating'>('popularity');
-  const [maxPrice, setMaxPrice] = useState(100000);
+  const [maxPrice, setMaxPrice] = useState(200);
 
   // Cart & Wishlist state
   const [cart, setCart] = useState<CartItem[]>([
@@ -79,14 +79,14 @@ export const JumiaStore: React.FC = () => {
           productId: 'jp-2',
           productName: 'Silver Crest 2L Heavy Duty Blender',
           quantity: 1,
-          price: 36900,
+          price: 69,
           image: '/src/assets/images/jumia_heavy_blender_1793198721640.jpg'
         }
       ],
-      subtotal: 36900,
-      deliveryFee: 1200,
+      subtotal: 69,
+      deliveryFee: 8,
       discount: 0,
-      total: 38100,
+      total: 77,
       deliveryType: 'door_delivery',
       paymentMethod: 'pay_on_delivery',
       status: 'Confirmed'
@@ -160,8 +160,8 @@ export const JumiaStore: React.FC = () => {
   const handleApplyVoucher = (code: string): boolean => {
     if (code.toUpperCase() === 'JUMIAKITCHEN') {
       setVoucherCode('JUMIAKITCHEN');
-      setVoucherDiscount(1500);
-      showToast('₦1,500 Voucher Applied Successfully!');
+      setVoucherDiscount(15);
+      showToast('$15 CAD Voucher Applied Successfully!');
       return true;
     }
     return false;
@@ -359,7 +359,7 @@ export const JumiaStore: React.FC = () => {
                       setExpressOnly(false);
                       setFlashSaleOnly(false);
                       setSearchQuery('');
-                      setMaxPrice(100000);
+                      setMaxPrice(200);
                     }}
                     className="text-[11px] text-[#F68B1E] hover:underline font-semibold flex items-center gap-1"
                   >
@@ -410,20 +410,20 @@ export const JumiaStore: React.FC = () => {
               <div className="py-3 border-b border-stone-100">
                 <div className="flex justify-between text-xs font-semibold text-stone-700 mb-1">
                   <span>Max Price:</span>
-                  <span className="text-[#F68B1E] font-bold">₦{maxPrice.toLocaleString()}</span>
+                  <span className="text-[#F68B1E] font-bold">${maxPrice.toLocaleString()} CAD</span>
                 </div>
                 <input
                   type="range"
-                  min={10000}
-                  max={100000}
-                  step={2000}
+                  min={20}
+                  max={200}
+                  step={5}
                   value={maxPrice}
                   onChange={(e) => setMaxPrice(Number(e.target.value))}
                   className="w-full accent-[#F68B1E] cursor-pointer"
                 />
                 <div className="flex justify-between text-[10px] text-stone-400 mt-1">
-                  <span>₦10,000</span>
-                  <span>₦100,000</span>
+                  <span>$20 CAD</span>
+                  <span>$200 CAD</span>
                 </div>
               </div>
 
@@ -434,7 +434,7 @@ export const JumiaStore: React.FC = () => {
                   <span>Free Door Delivery Available</span>
                 </div>
                 <p className="text-[11px] text-stone-600">
-                  Orders above ₦50,000 qualify for free express shipping within Lagos.
+                  Orders above $100 CAD qualify for free express shipping.
                 </p>
               </div>
             </div>
@@ -482,7 +482,7 @@ export const JumiaStore: React.FC = () => {
                     setSelectedCategory('all');
                     setSelectedBrand('All Brands');
                     setSearchQuery('');
-                    setMaxPrice(100000);
+                    setMaxPrice(200);
                   }}
                   className="px-5 py-2 bg-[#F68B1E] text-white font-bold rounded text-xs uppercase"
                 >
@@ -601,7 +601,7 @@ export const JumiaStore: React.FC = () => {
                     <img src={prod.image} alt={prod.name} className="w-12 h-12 object-contain bg-white rounded p-0.5 border" />
                     <div className="flex-1 min-w-0">
                       <p className="font-semibold text-stone-900 truncate">{prod.name}</p>
-                      <p className="text-[#F68B1E] font-bold">₦{prod.price.toLocaleString()}</p>
+                      <p className="text-[#F68B1E] font-bold">${prod.price.toLocaleString()} CAD</p>
                     </div>
                     <button
                       onClick={() => {
@@ -641,7 +641,7 @@ export const JumiaStore: React.FC = () => {
                     <span className="text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded text-[10px]">{ord.status}</span>
                   </div>
                   <p className="text-stone-600">Delivering to: {ord.deliveryAddress}, {ord.state}</p>
-                  <p className="text-[#F68B1E] font-bold">Total: ₦{ord.total.toLocaleString()}</p>
+                  <p className="text-[#F68B1E] font-bold">Total: ${ord.total.toLocaleString()} CAD</p>
                 </div>
               ))}
             </div>

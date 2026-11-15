@@ -42,10 +42,10 @@ export const JumiaCartDrawer: React.FC<JumiaCartDrawerProps> = ({
   if (!isOpen) return null;
 
   const subtotal = items.reduce((acc, item) => acc + item.product.price * item.quantity, 0);
-  const freeShippingThreshold = 50000;
+  const freeShippingThreshold = 100;
   const progressToFreeShipping = Math.min(100, Math.round((subtotal / freeShippingThreshold) * 100));
   const amountNeededForFree = Math.max(0, freeShippingThreshold - subtotal);
-  const estShipping = subtotal >= freeShippingThreshold || subtotal === 0 ? 0 : 1200;
+  const estShipping = subtotal >= freeShippingThreshold || subtotal === 0 ? 0 : 8;
   const finalTotal = Math.max(0, subtotal + estShipping - voucherDiscount);
 
   const handleApplyCoupon = (e: React.FormEvent) => {
@@ -53,7 +53,7 @@ export const JumiaCartDrawer: React.FC<JumiaCartDrawerProps> = ({
     if (!couponInput.trim()) return;
     const ok = onApplyVoucher(couponInput.trim());
     if (ok) {
-      setCouponMsg({ text: 'Voucher applied! Saved ₦1,500', success: true });
+      setCouponMsg({ text: 'Voucher applied! Saved $15 CAD', success: true });
     } else {
       setCouponMsg({ text: 'Invalid code. Try "JUMIAKITCHEN"', success: false });
     }
@@ -146,10 +146,10 @@ export const JumiaCartDrawer: React.FC<JumiaCartDrawerProps> = ({
                     </p>
                     <div className="flex items-baseline gap-2 mt-1">
                       <span className="font-black text-stone-900 text-sm">
-                        ${(item.product.price * item.quantity).toLocaleString()}
+                        ${(item.product.price * item.quantity).toLocaleString()} CAD
                       </span>
                       <span className="text-[11px] text-stone-400">
-                        (${item.product.price.toLocaleString()} each)
+                        (${item.product.price.toLocaleString()} CAD each)
                       </span>
                     </div>
 
@@ -218,18 +218,18 @@ export const JumiaCartDrawer: React.FC<JumiaCartDrawerProps> = ({
               <div className="space-y-1.5 text-xs text-stone-600 pt-1">
                 <div className="flex justify-between">
                   <span>Subtotal</span>
-                  <span className="font-semibold text-stone-900">${subtotal.toLocaleString()}</span>
+                  <span className="font-semibold text-stone-900">${subtotal.toLocaleString()} CAD</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Estimated Delivery</span>
                   <span className={estShipping === 0 ? 'text-emerald-600 font-bold' : 'font-semibold text-stone-900'}>
-                    {estShipping === 0 ? 'FREE' : `$${estShipping.toLocaleString()}`}
+                    {estShipping === 0 ? 'FREE' : `$${estShipping.toLocaleString()} CAD`}
                   </span>
                 </div>
                 {voucherDiscount > 0 && (
                   <div className="flex justify-between text-emerald-700 font-semibold">
                     <span>Voucher Discount</span>
-                    <span>-${voucherDiscount.toLocaleString()}</span>
+                    <span>-${voucherDiscount.toLocaleString()} CAD</span>
                   </div>
                 )}
                 <div className="flex justify-between text-base font-black text-stone-900 pt-2 border-t border-stone-200">
