@@ -13,28 +13,28 @@ interface ProofItem {
 const WHATSAPP_PROOF_GALLERY: ProofItem[] = [
   {
     id: 'proof_1',
-    src: '/public/assets/aistudio/image_4b9f4eb0.png',
+    src: '/assets/aistudio/image_4b9f4eb0.png',
     title: 'Fresh Zobo Pot & Clean Leaves Review',
     caption: '“Clean leaves! Fresh n ur smells sooo good! A little goes a long way.”',
     badge: 'Zobo Brewer Review'
   },
   {
     id: 'proof_2',
-    src: '/public/assets/aistudio/image_f499327d.png',
+    src: '/assets/aistudio/image_f499327d.png',
     title: '5kg Wholesale Sack Delivery Feedback',
     caption: '“I didn’t know the leaves will be this much... 5kg is a full sack! Saves me so much money!”',
     badge: 'Food Vendor Bulk Order'
   },
   {
     id: 'proof_3',
-    src: '/public/assets/aistudio/image_5a1e52c5.png',
+    src: '/assets/aistudio/image_5a1e52c5.png',
     title: 'Quality & Cleanliness Confirmation',
     caption: '“The quality of the zobo is fresh and the leaves are clean and well packaged. Ordering more!”',
     badge: 'Repeat Buyer Review'
   },
   {
     id: 'proof_4',
-    src: '/public/assets/aistudio/image_17889626.png',
+    src: '/assets/aistudio/image_17889626.png',
     title: 'Zobowellness Delivery & 20+ Recipe E-Book',
     caption: '“Delivered ma. So clean! E se ma. Thank you for the recipe e-book!”',
     badge: 'Verified WhatsApp Chat'

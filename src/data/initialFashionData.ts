@@ -1,10 +1,10 @@
 import { Garment, BoutiqueConfig, BoutiqueOrder, PrivateFittingBooking } from '../types/fashion';
 
-export const FASHION_HERO_IMAGE = '/src/assets/images/template_fashion_boutique_1793191760721.jpg';
-export const FASHION_DRESS_IMAGE = '/src/assets/images/fashion_silk_dress_1793192812492.jpg';
-export const FASHION_KIMONO_IMAGE = '/src/assets/images/fashion_linen_kimono_1793193691355.jpg';
-export const FASHION_TROUSERS_IMAGE = '/src/assets/images/fashion_tailored_suit_1793193704090.jpg';
-export const FASHION_TRENCH_IMAGE = '/src/assets/images/fashion_earth_trench_1793193724921.jpg';
+export const FASHION_HERO_IMAGE = '/images/template_fashion_boutique_1793191760721.jpg';
+export const FASHION_DRESS_IMAGE = '/images/fashion_silk_dress_1793192812492.jpg';
+export const FASHION_KIMONO_IMAGE = '/images/fashion_linen_kimono_1793193691355.jpg';
+export const FASHION_TROUSERS_IMAGE = '/images/fashion_tailored_suit_1793193704090.jpg';
+export const FASHION_TRENCH_IMAGE = '/images/fashion_earth_trench_1793193724921.jpg';
 
 export const FASHION_PRESET_IMAGES = [
   { label: 'Champagne Silk Slip Dress', url: FASHION_DRESS_IMAGE },

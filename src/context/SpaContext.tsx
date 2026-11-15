@@ -44,9 +44,9 @@ interface SpaContextType {
 }
 
 const STORAGE_KEYS = {
-  CONFIG: 'solace_spa_config_v3',
-  TREATMENTS: 'solace_spa_treatments_v3',
-  APPOINTMENTS: 'solace_spa_appointments_v3'
+  CONFIG: 'solace_spa_config_v4_cad',
+  TREATMENTS: 'solace_spa_treatments_v4_cad',
+  APPOINTMENTS: 'solace_spa_appointments_v4_cad'
 };
 
 const SpaContext = createContext<SpaContextType | null>(null);

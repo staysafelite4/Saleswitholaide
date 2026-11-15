@@ -339,7 +339,7 @@ const FashionInner: React.FC = () => {
           <div className="lg:col-span-5 relative">
             <div className="relative rounded-2xl overflow-hidden border border-stone-200 shadow-2xl bg-stone-200 aspect-[3/4] max-h-[520px]">
               <img
-                src="/src/assets/images/fashion_silk_dress_1793192812492.jpg"
+                src="/images/fashion_silk_dress_1793192812492.jpg"
                 alt="AURA Atelier Luxury Silk Slip Dress"
                 className="w-full h-full object-cover"
               />

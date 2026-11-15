@@ -1,9 +1,9 @@
 import { SpaTreatment, SpaConfig, SpaAppointment, SpaTherapist, SpaReview } from '../types/spa';
 
-export const SPA_HERO_IMAGE = '/src/assets/images/template_spa_wellness_1793191760546.jpg';
-export const SPA_OIL_IMAGE = '/src/assets/images/spa_massage_oil_1793192813098.jpg';
-export const SPA_FACIAL_IMAGE = '/src/assets/images/spa_facial_treatment_1793193190992.jpg';
-export const SPA_COUPLES_IMAGE = '/src/assets/images/spa_couples_suite_1793193190635.jpg';
+export const SPA_HERO_IMAGE = '/images/template_spa_wellness_1793191760546.jpg';
+export const SPA_OIL_IMAGE = '/images/spa_massage_oil_1793192813098.jpg';
+export const SPA_FACIAL_IMAGE = '/images/spa_facial_treatment_1793193190992.jpg';
+export const SPA_COUPLES_IMAGE = '/images/spa_couples_suite_1793193190635.jpg';
 
 export const INITIAL_TREATMENTS: SpaTreatment[] = [
   {

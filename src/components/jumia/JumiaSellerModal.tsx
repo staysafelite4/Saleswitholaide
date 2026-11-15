@@ -45,7 +45,7 @@ export const JumiaSellerModal: React.FC<JumiaSellerModalProps> = ({
   const [newStock, setNewStock] = useState('20');
   const [newIsExpress, setNewIsExpress] = useState(true);
   const [newIsFlash, setNewIsFlash] = useState(false);
-  const [newImage, setNewImage] = useState('/src/assets/images/jumia_cookware_set_1793198721213.jpg');
+  const [newImage, setNewImage] = useState('/images/jumia_cookware_set_1793198721213.jpg');
   const [newDesc, setNewDesc] = useState('Premium kitchenware with durable construction and non-stick performance.');
 
   if (!isOpen) return null;
@@ -98,14 +98,14 @@ export const JumiaSellerModal: React.FC<JumiaSellerModalProps> = ({
   };
 
   const presetImages = [
-    { label: 'Cookware Set', url: '/src/assets/images/jumia_cookware_set_1793198721213.jpg' },
-    { label: 'Heavy Blender', url: '/src/assets/images/jumia_heavy_blender_1793198721640.jpg' },
-    { label: 'Air Fryer', url: '/src/assets/images/jumia_air_fryer_1793198740159.jpg' },
-    { label: 'Yam Pounder', url: '/src/assets/images/jumia_yam_pounder_1793198754143.jpg' },
-    { label: 'Dish Rack', url: '/src/assets/images/jumia_dish_rack_1793198739810.jpg' },
-    { label: 'Food Flask', url: '/src/assets/images/jumia_food_flask_1793198755457.jpg' },
-    { label: 'Silicone Utensils', url: '/src/assets/images/jumia_silicone_utensils_1793198824120.jpg' },
-    { label: 'Chef Knives', url: '/src/assets/images/jumia_knife_set_1793198823750.jpg' }
+    { label: 'Cookware Set', url: '/images/jumia_cookware_set_1793198721213.jpg' },
+    { label: 'Heavy Blender', url: '/images/jumia_heavy_blender_1793198721640.jpg' },
+    { label: 'Air Fryer', url: '/images/jumia_air_fryer_1793198740159.jpg' },
+    { label: 'Yam Pounder', url: '/images/jumia_yam_pounder_1793198754143.jpg' },
+    { label: 'Dish Rack', url: '/images/jumia_dish_rack_1793198739810.jpg' },
+    { label: 'Food Flask', url: '/images/jumia_food_flask_1793198755457.jpg' },
+    { label: 'Silicone Utensils', url: '/images/jumia_silicone_utensils_1793198824120.jpg' },
+    { label: 'Chef Knives', url: '/images/jumia_knife_set_1793198823750.jpg' }
   ];
 
   return (

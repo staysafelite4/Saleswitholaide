@@ -80,7 +80,7 @@ export const JumiaStore: React.FC = () => {
           productName: 'Silver Crest 2L Heavy Duty Blender',
           quantity: 1,
           price: 69,
-          image: '/src/assets/images/jumia_heavy_blender_1793198721640.jpg'
+          image: '/images/jumia_heavy_blender_1793198721640.jpg'
         }
       ],
       subtotal: 69,
@@ -314,12 +314,12 @@ export const JumiaStore: React.FC = () => {
             </h3>
             <div className="grid grid-cols-3 sm:grid-cols-6 gap-3 text-center">
               {[
-                { name: 'Pots & Pans', cat: 'Cookware & Pots', img: '/src/assets/images/jumia_cookware_set_1793198721213.jpg' },
-                { name: 'Blenders & Mixers', cat: 'Small Appliances', img: '/src/assets/images/jumia_heavy_blender_1793198721640.jpg' },
-                { name: 'Air Fryers', cat: 'Small Appliances', img: '/src/assets/images/jumia_air_fryer_1793198740159.jpg' },
-                { name: 'Yam Pounders', cat: 'Small Appliances', img: '/src/assets/images/jumia_yam_pounder_1793198754143.jpg' },
-                { name: 'Dish Racks', cat: 'Kitchen Organization', img: '/src/assets/images/jumia_dish_rack_1793198739810.jpg' },
-                { name: 'Food Flasks', cat: 'Food Storage', img: '/src/assets/images/jumia_food_flask_1793198755457.jpg' }
+                { name: 'Pots & Pans', cat: 'Cookware & Pots', img: '/images/jumia_cookware_set_1793198721213.jpg' },
+                { name: 'Blenders & Mixers', cat: 'Small Appliances', img: '/images/jumia_heavy_blender_1793198721640.jpg' },
+                { name: 'Air Fryers', cat: 'Small Appliances', img: '/images/jumia_air_fryer_1793198740159.jpg' },
+                { name: 'Yam Pounders', cat: 'Small Appliances', img: '/images/jumia_yam_pounder_1793198754143.jpg' },
+                { name: 'Dish Racks', cat: 'Kitchen Organization', img: '/images/jumia_dish_rack_1793198739810.jpg' },
+                { name: 'Food Flasks', cat: 'Food Storage', img: '/images/jumia_food_flask_1793198755457.jpg' }
               ].map((item, i) => (
                 <div
                   key={i}

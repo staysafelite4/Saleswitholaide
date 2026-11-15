@@ -332,7 +332,7 @@ const RestaurantInner: React.FC = () => {
           <div className="lg:col-span-5 relative">
             <div className="relative rounded-2xl overflow-hidden border border-stone-800 shadow-2xl bg-stone-900 aspect-[4/3] sm:aspect-[4/3] group">
               <img
-                src="/src/assets/images/african_egusi_soup_1793194327433.jpg"
+                src="/images/african_egusi_soup_1793194327433.jpg"
                 alt="Authentic African Egusi Soup with Goat Meat and Pounded Yam"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
               />
@@ -588,7 +588,7 @@ const RestaurantInner: React.FC = () => {
           <div className="lg:col-span-6">
             <div className="rounded-2xl overflow-hidden border border-stone-800 shadow-2xl relative">
               <img
-                src="/src/assets/images/african_party_jollof_1793194339863.jpg"
+                src="/images/african_party_jollof_1793194339863.jpg"
                 alt="Firewood Party Jollof Feast Cooler"
                 className="w-full h-[400px] object-cover"
               />

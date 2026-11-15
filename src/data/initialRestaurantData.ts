@@ -1,12 +1,12 @@
 import { Dish, RestaurantConfig, TableReservation, TakeoutOrder } from '../types/restaurant';
 
-export const RESTAURANT_HERO_IMAGE = '/src/assets/images/template_restaurant_food_1793191761370.jpg';
-export const AFRICAN_EGUSI_IMAGE = '/src/assets/images/african_egusi_soup_1793194327433.jpg';
-export const AFRICAN_JOLLOF_IMAGE = '/src/assets/images/african_party_jollof_1793194339863.jpg';
-export const AFRICAN_SEAFOOD_IMAGE = '/src/assets/images/african_fisherman_soup_1793194353111.jpg';
-export const RESTAURANT_SUYA_IMAGE = '/src/assets/images/restaurant_suya_skewer_1793192277150.jpg';
-export const RESTAURANT_FISH_IMAGE = '/src/assets/images/restaurant_grilled_fish_1793192277065.jpg';
-export const RESTAURANT_DRINK_IMAGE = '/src/assets/images/hero_zobo_drink_1793191126883.jpg';
+export const RESTAURANT_HERO_IMAGE = '/images/template_restaurant_food_1793191761370.jpg';
+export const AFRICAN_EGUSI_IMAGE = '/images/african_egusi_soup_1793194327433.jpg';
+export const AFRICAN_JOLLOF_IMAGE = '/images/african_party_jollof_1793194339863.jpg';
+export const AFRICAN_SEAFOOD_IMAGE = '/images/african_fisherman_soup_1793194353111.jpg';
+export const RESTAURANT_SUYA_IMAGE = '/images/restaurant_suya_skewer_1793192277150.jpg';
+export const RESTAURANT_FISH_IMAGE = '/images/restaurant_grilled_fish_1793192277065.jpg';
+export const RESTAURANT_DRINK_IMAGE = '/images/hero_zobo_drink_1793191126883.jpg';
 
 export const AFRICAN_DISH_PRESETS = [
   { label: 'Egusi Soup & Pounded Yam', url: AFRICAN_EGUSI_IMAGE },

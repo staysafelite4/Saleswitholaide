@@ -55,10 +55,10 @@ interface StoreContextType {
 }
 
 const STORAGE_KEYS = {
-  CONFIG: 'zobowellness_config_v3',
-  PRODUCTS: 'zobowellness_products_v3',
-  ORDERS: 'zobowellness_orders_v3',
-  CURRENCY: 'zobowellness_currency_v3'
+  CONFIG: 'zobowellness_config_v4_cad',
+  PRODUCTS: 'zobowellness_products_v4_cad',
+  ORDERS: 'zobowellness_orders_v4_cad',
+  CURRENCY: 'zobowellness_currency_v4_cad'
 };
 
 const StoreContext = createContext<StoreContextType | null>(null);

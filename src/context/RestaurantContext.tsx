@@ -86,10 +86,10 @@ interface RestaurantContextType {
 }
 
 const STORAGE_KEYS = {
-  CONFIG: 'savanna_african_restaurant_config_v3',
-  DISHES: 'savanna_african_restaurant_dishes_v3',
-  RESERVATIONS: 'savanna_african_restaurant_reservations_v3',
-  ORDERS: 'savanna_african_restaurant_orders_v3'
+  CONFIG: 'savanna_african_restaurant_config_v4_cad',
+  DISHES: 'savanna_african_restaurant_dishes_v4_cad',
+  RESERVATIONS: 'savanna_african_restaurant_reservations_v4_cad',
+  ORDERS: 'savanna_african_restaurant_orders_v4_cad'
 };
 
 const RestaurantContext = createContext<RestaurantContextType | null>(null);

@@ -48,10 +48,10 @@ export const INITIAL_JUMIA_PRODUCTS: JumiaProduct[] = [
     discountPercent: 36,
     rating: 4.8,
     reviewCount: 382,
-    image: '/src/assets/images/jumia_cookware_set_1793198721213.jpg',
+    image: '/images/jumia_cookware_set_1793198721213.jpg',
     gallery: [
-      '/src/assets/images/jumia_cookware_set_1793198721213.jpg',
-      '/src/assets/images/jumia_silicone_utensils_1793198824120.jpg'
+      '/images/jumia_cookware_set_1793198721213.jpg',
+      '/images/jumia_silicone_utensils_1793198824120.jpg'
     ],
     inStock: true,
     stockCount: 14,
@@ -107,9 +107,9 @@ export const INITIAL_JUMIA_PRODUCTS: JumiaProduct[] = [
     discountPercent: 37,
     rating: 4.9,
     reviewCount: 512,
-    image: '/src/assets/images/jumia_heavy_blender_1793198721640.jpg',
+    image: '/images/jumia_heavy_blender_1793198721640.jpg',
     gallery: [
-      '/src/assets/images/jumia_heavy_blender_1793198721640.jpg'
+      '/images/jumia_heavy_blender_1793198721640.jpg'
     ],
     inStock: true,
     stockCount: 9,
@@ -157,9 +157,9 @@ export const INITIAL_JUMIA_PRODUCTS: JumiaProduct[] = [
     discountPercent: 38,
     rating: 4.7,
     reviewCount: 228,
-    image: '/src/assets/images/jumia_air_fryer_1793198740159.jpg',
+    image: '/images/jumia_air_fryer_1793198740159.jpg',
     gallery: [
-      '/src/assets/images/jumia_air_fryer_1793198740159.jpg'
+      '/images/jumia_air_fryer_1793198740159.jpg'
     ],
     inStock: true,
     stockCount: 18,
@@ -206,9 +206,9 @@ export const INITIAL_JUMIA_PRODUCTS: JumiaProduct[] = [
     discountPercent: 35,
     rating: 4.8,
     reviewCount: 460,
-    image: '/src/assets/images/jumia_yam_pounder_1793198754143.jpg',
+    image: '/images/jumia_yam_pounder_1793198754143.jpg',
     gallery: [
-      '/src/assets/images/jumia_yam_pounder_1793198754143.jpg'
+      '/images/jumia_yam_pounder_1793198754143.jpg'
     ],
     inStock: true,
     stockCount: 22,
@@ -255,9 +255,9 @@ export const INITIAL_JUMIA_PRODUCTS: JumiaProduct[] = [
     discountPercent: 36,
     rating: 4.6,
     reviewCount: 195,
-    image: '/src/assets/images/jumia_dish_rack_1793198739810.jpg',
+    image: '/images/jumia_dish_rack_1793198739810.jpg',
     gallery: [
-      '/src/assets/images/jumia_dish_rack_1793198739810.jpg'
+      '/images/jumia_dish_rack_1793198739810.jpg'
     ],
     inStock: true,
     stockCount: 30,
@@ -303,9 +303,9 @@ export const INITIAL_JUMIA_PRODUCTS: JumiaProduct[] = [
     discountPercent: 35,
     rating: 4.9,
     reviewCount: 340,
-    image: '/src/assets/images/jumia_food_flask_1793198755457.jpg',
+    image: '/images/jumia_food_flask_1793198755457.jpg',
     gallery: [
-      '/src/assets/images/jumia_food_flask_1793198755457.jpg'
+      '/images/jumia_food_flask_1793198755457.jpg'
     ],
     inStock: true,
     stockCount: 16,
@@ -351,9 +351,9 @@ export const INITIAL_JUMIA_PRODUCTS: JumiaProduct[] = [
     discountPercent: 35,
     rating: 4.8,
     reviewCount: 410,
-    image: '/src/assets/images/jumia_silicone_utensils_1793198824120.jpg',
+    image: '/images/jumia_silicone_utensils_1793198824120.jpg',
     gallery: [
-      '/src/assets/images/jumia_silicone_utensils_1793198824120.jpg'
+      '/images/jumia_silicone_utensils_1793198824120.jpg'
     ],
     inStock: true,
     stockCount: 25,
@@ -399,9 +399,9 @@ export const INITIAL_JUMIA_PRODUCTS: JumiaProduct[] = [
     discountPercent: 38,
     rating: 4.7,
     reviewCount: 275,
-    image: '/src/assets/images/jumia_knife_set_1793198823750.jpg',
+    image: '/images/jumia_knife_set_1793198823750.jpg',
     gallery: [
-      '/src/assets/images/jumia_knife_set_1793198823750.jpg'
+      '/images/jumia_knife_set_1793198823750.jpg'
     ],
     inStock: true,
     stockCount: 19,
@@ -447,9 +447,9 @@ export const INITIAL_JUMIA_PRODUCTS: JumiaProduct[] = [
     discountPercent: 34,
     rating: 4.8,
     reviewCount: 180,
-    image: '/src/assets/images/jumia_cookware_set_1793198721213.jpg',
+    image: '/images/jumia_cookware_set_1793198721213.jpg',
     gallery: [
-      '/src/assets/images/jumia_cookware_set_1793198721213.jpg'
+      '/images/jumia_cookware_set_1793198721213.jpg'
     ],
     inStock: true,
     stockCount: 11,
@@ -495,9 +495,9 @@ export const INITIAL_JUMIA_PRODUCTS: JumiaProduct[] = [
     discountPercent: 37,
     rating: 4.6,
     reviewCount: 310,
-    image: '/src/assets/images/jumia_air_fryer_1793198740159.jpg',
+    image: '/images/jumia_air_fryer_1793198740159.jpg',
     gallery: [
-      '/src/assets/images/jumia_air_fryer_1793198740159.jpg'
+      '/images/jumia_air_fryer_1793198740159.jpg'
     ],
     inStock: true,
     stockCount: 35,
@@ -543,9 +543,9 @@ export const INITIAL_JUMIA_PRODUCTS: JumiaProduct[] = [
     discountPercent: 34,
     rating: 4.7,
     reviewCount: 160,
-    image: '/src/assets/images/jumia_cookware_set_1793198721213.jpg',
+    image: '/images/jumia_cookware_set_1793198721213.jpg',
     gallery: [
-      '/src/assets/images/jumia_cookware_set_1793198721213.jpg'
+      '/images/jumia_cookware_set_1793198721213.jpg'
     ],
     inStock: true,
     stockCount: 15,
@@ -590,9 +590,9 @@ export const INITIAL_JUMIA_PRODUCTS: JumiaProduct[] = [
     discountPercent: 37,
     rating: 4.9,
     reviewCount: 140,
-    image: '/src/assets/images/jumia_dish_rack_1793198739810.jpg',
+    image: '/images/jumia_dish_rack_1793198739810.jpg',
     gallery: [
-      '/src/assets/images/jumia_dish_rack_1793198739810.jpg'
+      '/images/jumia_dish_rack_1793198739810.jpg'
     ],
     inStock: true,
     stockCount: 8,
@@ -637,7 +637,7 @@ export const JUMIA_HERO_SLIDES = [
     subtitle: 'UP TO 40% OFF TOP COOKWARE & APPLIANCES',
     tag: 'EXPLORE TOP DEALS',
     category: 'Cookware & Pots',
-    bannerImage: '/src/assets/images/jumia_hero_banner_1793198771022.jpg',
+    bannerImage: '/images/jumia_hero_banner_1793198771022.jpg',
     badge: 'JUMIA EXCLUSIVE'
   },
   {
@@ -646,7 +646,7 @@ export const JUMIA_HERO_SLIDES = [
     subtitle: 'Crush Beans & Tiger Nuts In 30 Seconds • 32,000 RPM',
     tag: 'SHOP BLENDERS',
     category: 'Small Appliances',
-    bannerImage: '/src/assets/images/jumia_hero_banner_1793198771022.jpg',
+    bannerImage: '/images/jumia_hero_banner_1793198771022.jpg',
     badge: 'BEST SELLERS'
   },
   {
@@ -655,7 +655,7 @@ export const JUMIA_HERO_SLIDES = [
     subtitle: 'Crispy Grilled Fish & Chicken With Zero Oil Splatter',
     tag: 'VIEW AIR FRYERS',
     category: 'Small Appliances',
-    bannerImage: '/src/assets/images/jumia_hero_banner_1793198771022.jpg',
+    bannerImage: '/images/jumia_hero_banner_1793198771022.jpg',
     badge: 'HEALTHY LIVING'
   }
 ];

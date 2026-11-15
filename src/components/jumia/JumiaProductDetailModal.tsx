@@ -177,7 +177,7 @@ export const JumiaProductDetailModal: React.FC<JumiaProductDetailModalProps> = (
                     </span>
                     {product.oldPrice > product.price && (
                       <span className="text-sm text-stone-400 line-through">
-                        $ {product.oldPrice.toLocaleString()}
+                        $ {product.oldPrice.toLocaleString()} CAD
                       </span>
                     )}
                     <span className="bg-rose-100 text-rose-700 text-xs font-black px-1.5 py-0.5 rounded">

@@ -208,7 +208,7 @@ const SpaInner: React.FC = () => {
 
           <div className="lg:col-span-5 rounded-2xl overflow-hidden border border-stone-200 shadow-xl group">
             <img
-              src="/src/assets/images/template_spa_wellness_1793191760546.jpg"
+              src="/images/template_spa_wellness_1793191760546.jpg"
               alt="Solace Sanctuary Suite"
               className="w-full h-[450px] object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
             />
@@ -354,7 +354,7 @@ const SpaInner: React.FC = () => {
 
           <div className="lg:col-span-6 rounded-2xl overflow-hidden border border-stone-200 shadow-xl">
             <img
-              src="/src/assets/images/spa_couples_suite_1793193190635.jpg"
+              src="/images/spa_couples_suite_1793193190635.jpg"
               alt="Couples Suite"
               className="w-full h-80 object-cover"
             />

@@ -74,7 +74,7 @@ export const TEMPLATES: BusinessTemplate[] = [
     tagline: 'Authentic Jumia shopping experience: Cookware, Blenders, Air Fryers, Flash Sales, Jumia Express 48h & Seller CMS.',
     category: 'Retail Marketplace',
     description: 'A complete multi-category e-commerce marketplace modeled exactly after Jumia Nigeria. Features signature Jumia orange styling, countdown Flash Sales rail, instant search autocomplete, multi-state delivery fee calculator, sliding shopping cart, 3-step checkout with Pay on Delivery & WhatsApp order confirmation, plus a real-time Seller Center CMS.',
-    image: '/src/assets/images/jumia_cookware_set_1793198721213.jpg',
+    image: '/images/jumia_cookware_set_1793198721213.jpg',
     features: [
       'Authentic Jumia UI: Signature Orange, Express Badges & Flash Sales Clock',
       'Instant Search Autocomplete & Multi-Department Categories',
@@ -98,7 +98,7 @@ export const TEMPLATES: BusinessTemplate[] = [
     tagline: 'Cleaned Grade A Hibiscus Sabdariffa bulk supply (1kg - 1000kg+) & 22+ botanical tea leaves with direct WhatsApp ordering.',
     category: 'Food & Drink',
     description: 'Designed specifically for beverage brands, fresh juice makers, and craft drinks. Includes real-time bottle pricing, availability toggles, promotional alert banners, and customer delivery summaries sent directly to WhatsApp.',
-    image: '/src/assets/images/hero_zobo_drink_1793191126883.jpg',
+    image: '/images/hero_zobo_drink_1793191126883.jpg',
     features: [
       'Itemized WhatsApp Cart Checkout with Delivery Notes',
       'Live Admin CMS Dashboard with PIN Auth',
@@ -121,7 +121,7 @@ export const TEMPLATES: BusinessTemplate[] = [
     tagline: 'Authentic gourmet dishes: Egusi & Pounded Yam, Party Jollof, Suya Skewers, Fisherman Soup & Catering Coolers.',
     category: 'Restaurant',
     description: 'Designed for restaurants, bukkas, caterers, and food brands. Customers select their swallow, proteins, order party coolers, and send orders straight to WhatsApp.',
-    image: '/src/assets/images/african_egusi_soup_1793194327433.jpg',
+    image: '/images/african_egusi_soup_1793194327433.jpg',
     features: [
       'Signature Dishes (Egusi, Fisherman Soup, Firewood Jollof, Suya)',
       'Swallow & Protein Customizer Options',
@@ -144,7 +144,7 @@ export const TEMPLATES: BusinessTemplate[] = [
     tagline: 'Clean aesthetic lookbook, seasonal clothing collection, size selector & WhatsApp boutique concierge.',
     category: 'Fashion & Retail',
     description: 'Modern minimalist e-commerce showcase for fashion designers, luxury apparel, streetwear brands, and shoe boutiques. Customers pick their sizes and colors, then chat directly with your stylist on WhatsApp.',
-    image: '/src/assets/images/fashion_silk_dress_1793192812492.jpg',
+    image: '/images/fashion_silk_dress_1793192812492.jpg',
     features: [
       'High-End Fashion Editorial Lookbook Grid with Fabric Badges',
       'Interactive Color Swatches & Size Selector (XS–XL)',
@@ -167,7 +167,7 @@ export const TEMPLATES: BusinessTemplate[] = [
     tagline: 'Treatment menu, massage packages, therapist profiles & WhatsApp appointment scheduler.',
     category: 'Health & Spa',
     description: 'Serene, tranquil web presence for wellness clinics, massage parlors, beauty salons, and aesthetics studios. Clients view packages, pricing, therapist qualifications, and reserve session slots via WhatsApp.',
-    image: '/src/assets/images/template_spa_wellness_1793191760546.jpg',
+    image: '/images/template_spa_wellness_1793191760546.jpg',
     features: [
       'Spa Treatment & Service Pricing Catalog',
       'Preferred Date & Time Slot WhatsApp Booker',
@@ -205,7 +205,7 @@ export const AGENCY_CONFIG = {
     },
     {
       title: 'Zero Monthly SaaS Tax',
-      desc: 'Stop paying $39/mo or percentage commission to third-party website builders. You own your website completely.'
+      desc: 'Stop paying $39 CAD/mo or percentage commission to third-party website builders. You own your website completely.'
     },
     {
       title: 'Guaranteed 48-Hour Delivery',

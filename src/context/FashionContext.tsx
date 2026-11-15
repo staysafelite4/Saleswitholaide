@@ -83,10 +83,10 @@ interface FashionContextType {
 }
 
 const STORAGE_KEYS = {
-  CONFIG: 'aura_boutique_config_v3',
-  GARMENTS: 'aura_boutique_garments_v3',
-  ORDERS: 'aura_boutique_orders_v3',
-  FITTINGS: 'aura_boutique_fittings_v3'
+  CONFIG: 'aura_boutique_config_v4_cad',
+  GARMENTS: 'aura_boutique_garments_v4_cad',
+  ORDERS: 'aura_boutique_orders_v4_cad',
+  FITTINGS: 'aura_boutique_fittings_v4_cad'
 };
 
 const FashionContext = createContext<FashionContextType | null>(null);

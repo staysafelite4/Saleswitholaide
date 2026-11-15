@@ -367,7 +367,7 @@ export const AdminDashboard: React.FC = () => {
                         <tr>
                           <th className="py-3 px-4">Item</th>
                           <th className="py-3 px-3">Size/Category</th>
-                          <th className="py-3 px-3">Price ({siteConfig.currencySymbol})</th>
+                          <th className="py-3 px-3">Price ($ CAD)</th>
                           <th className="py-3 px-3">Compare At</th>
                           <th className="py-3 px-3">Availability</th>
                           <th className="py-3 px-4 text-right">Actions</th>

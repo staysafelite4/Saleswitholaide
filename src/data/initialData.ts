@@ -1,9 +1,9 @@
 import { Product, SiteConfig, OrderLog } from '../types';
 
-export const HERO_IMAGE_PATH = '/src/assets/images/hero_zobo_drink_1793191126883.jpg';
-export const PRODUCT_CLASSIC_IMAGE = '/src/assets/images/product_zobo_classic_1793191126036.jpg';
-export const PRODUCT_GINGER_IMAGE = '/src/assets/images/product_zobo_ginger_1793191126695.jpg';
-export const PRODUCT_PINEAPPLE_IMAGE = '/src/assets/images/product_zobo_pineapple_1793191126579.jpg';
+export const HERO_IMAGE_PATH = '/images/hero_zobo_drink_1793191126883.jpg';
+export const PRODUCT_CLASSIC_IMAGE = '/images/product_zobo_classic_1793191126036.jpg';
+export const PRODUCT_GINGER_IMAGE = '/images/product_zobo_ginger_1793191126695.jpg';
+export const PRODUCT_PINEAPPLE_IMAGE = '/images/product_zobo_pineapple_1793191126579.jpg';
 
 export const INITIAL_PRODUCTS: Product[] = [
   // PRIMARY FLAGSHIP: Cleaned Grade A Hibiscus Leaf Bulk Tiers
